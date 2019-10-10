@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>I-No Cookies | Contact Us</title>
+<!-- CSS -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- JAVASCRIPT -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){ 
+    $('#characterLeft').text('140 characters left');
+    $('#message').keydown(function () {
+        var max = 140;
+        var len = $(this).val().length;
+        if (len >= max) {
+            $('#characterLeft').text('You have reached the limit');
+            $('#characterLeft').addClass('red');
+            $('#btnSubmit').addClass('disabled');            
+        } 
+        else {
+            var ch = max - len;
+            $('#characterLeft').text(ch + ' characters left');
+            $('#btnSubmit').removeClass('disabled');
+            $('#characterLeft').removeClass('red');            
+        }
+    });    
+});
+	</script>
+<!-- FONTS & SOCIAL MEDIA ICONS-->
+	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<!-- NAVBAR -->
+<body>
+<div class="page-wrap">
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+	  <a class="navbar-brand" href="index.html"><img src="logo.jpg" width="80" height="80" alt=""></a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav ml-auto">
+	      <li class="nav-item">
+	        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="cookiesgallery.html">Cookies</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Prices</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Order</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+	</header>
+</div>
+<!-- CONTACT FORM -->
+	<div class="container">
+	<div class="col-md-5">
+	    <div class="form-area">  
+	        <form role="form" action="mailto:mk3sullivan@yahoo.com" method="get">
+	        <br style="clear:both">
+	                    <h3 style="margin-bottom: 25px; text-align: center;">Contact Form</h3>
+	    				<div class="form-group">
+							<input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="email" name="mail" placeholder="Email" required>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="mobile" name="mobile" placeholder="Phone Number" required>
+						</div>
+						<select class="form-group form-control" id="subject" name="subject">
+                    <option selected value="na">
+                    	Subject (Select one)
+                    </option>
+    
+                    <option value="service">
+                        Questions
+                    </option>
+    
+                    <option value="suggestions">
+                        Suggestions
+                    </option>
+    
+                    <option value="product">
+                        Order Cookies
+                    </option>
+                </select>
+	                    <div class="form-group">
+	                    <textarea name="message" class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+	                        <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>                    
+	                    </div>
+	            
+	        <button type="button" id="submit" name="submit" class="btn btn-primary pull-right" onclick="window.location.href = 'https://jesse-sullivan.com/ordersubmit.html';">Submit Form</button>
+	        </form>
+	    </div>
+	</div>
+	</div>
+</div>
+<!-- FOOTER -->
+	<footer class="footer">
+		<div class="footer-info">
+			<ul class="footer-links">
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="terms&conditions.html">Terms & Conditions</a></li>
+				<li>Privacy Policy</li>
+				<li><a href="order.html">Contact</a></li>
+			</ul>
+			<ul class="media-icons">
+				<li><a href="https://www.facebook.com/I-No-Cookies-233642960721937/" target="blank"><i class="fa fa-facebook-f"></i></a></li>
+				<li><a href="https://www.instagram.com/inocookies/" target="blank"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="mailto:inocookies.mp@gmail.com"><i class="fa fa-envelope"></i></a></li>
+			</ul>
+			<p class="copyright">&copy; 2019 I-No Cookies</p>
+		</div>
+	</footer>
+</body>
+</html>

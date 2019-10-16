@@ -52,13 +52,10 @@
 	        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="cookiesgallery.html">Cookies</a>
+	        <a class="nav-link" href="cookiesgallery.html">Cookies & Prices</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">Prices</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="#">Order</a>
+	        <a class="nav-link" href="#">Order / Contact</a>
 	      </li>
 	    </ul>
 	  </div>
@@ -67,45 +64,38 @@
 </div>
 <!-- CONTACT FORM -->
 	<div class="container">
-	<div class="col-md-5">
-	    <div class="form-area">  
-	        <form role="form" action="mailto:mk3sullivan@yahoo.com" method="get">
-	        <br style="clear:both">
-	                    <h3 style="margin-bottom: 25px; text-align: center;">Contact Form</h3>
-	    				<div class="form-group">
-							<input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-control" id="email" name="mail" placeholder="Email" required>
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-control" id="mobile" name="mobile" placeholder="Phone Number" required>
-						</div>
-						<select class="form-group form-control" id="subject" name="subject">
-                    <option selected value="na">
-                    	Subject (Select one)
-                    </option>
-    
-                    <option value="service">
-                        Questions
-                    </option>
-    
-                    <option value="suggestions">
-                        Suggestions
-                    </option>
-    
-                    <option value="product">
-                        Order Cookies
-                    </option>
-                </select>
-	                    <div class="form-group">
-	                    <textarea name="message" class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
-	                        <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>                    
-	                    </div>
-	            
-	        <button type="button" id="submit" name="submit" class="btn btn-primary pull-right" onclick="window.location.href = 'https://jesse-sullivan.com/ordersubmit.html';">Submit Form</button>
-	        </form>
-	    </div>
+		<h6 class="text-center">Have any questions? Looking to make an order?</h6>
+		<h3 class="mt-5 text-center mb-5">
+				Please fill out the form below and I will get in touch with you as soon as possible. I look forward to doing business with you!
+			</h3>
+	
+	    <form name="RegForm" class="form" action="send_form_email.php" onsubmit="return formValidation()" method="POST">
+		
+		<p class="name">
+			<label for="name">Name</label><br>
+			<input type="text" name="name" id="name" pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$" required/>
+		</p>
+
+		<p class="phone">
+			<label for="phone">Phone</label><br>
+			<input type="text" name="phone" id="phone"  pattern="^\(?\d{3}\)?[- ]?\d{3}[- ]?\d{4}$" required/>
+		</p>	
+		
+		<p class="email">
+			<label for="email">Email</label><br>
+			<input type="text" name="email" id="email" pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$" required/>
+		</p>
+
+		<p class="text">
+			<label for="message">Message</label><br>
+			<textarea name="message"/></textarea>
+		</p>
+		
+		<p class="submit">
+			<input type="submit" value="Send" />
+		</p>
+	</form>
+	   
 	</div>
 	</div>
 </div>
